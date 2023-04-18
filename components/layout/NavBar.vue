@@ -15,10 +15,8 @@
 <template>
 
   <!-- sidenav -->
-  <!--
     <v-navigation-drawer v-model="drawer">
     </v-navigation-drawer>
-  -->
 
     <!-- System bar -->
     <v-system-bar class="px-md-12 
