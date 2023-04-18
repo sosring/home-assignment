@@ -8,6 +8,8 @@
     { title: 'Most Popular', icon: null, to: "/" },
     { title: 'Sell Your Tickets', icon: null, to: "/", bold: true },
   ]
+
+  //const steps = [ 'Order Gurantee', 'Valid & Authentic Tickets', 'Secure & Safe Transaction', 'Customer Care Team' ] 
 </script>
 
 <template>
@@ -18,12 +20,36 @@
     </v-navigation-drawer>
   -->
 
+    <!-- System bar -->
+    <v-system-bar class="px-md-12 
+    d-flex justify-space-between"
+    height="35">
+
+      <span class="text-black">
+        <p>
+         COVID-19 - 
+         <a href="#">Click Here</a>
+         for updates about your order
+        </p>
+      </span>
+
+      <span class="text-black">
+        <v-icon>mdi-lock-outline</v-icon>
+        <a href="#">Sign In</a> |
+        <a href="tel:08712845277"
+        class="text-decoration-none">
+          UK Tel: 0871 284 5277
+        </a>
+      </span>
+    </v-system-bar>
+
     <!-- NavBar -->
     <v-app-bar elevation="0"
-     class="px-4 px-md-12 pt-1">
+     class="px-4 px-md-12 py-0">
 
      <v-row align="center" class="flex-column">
-      <v-col class="w-100  d-flex 
+
+      <v-col cols="12" class="d-flex py-0
        justify-space-between align-center">
 
         <v-app-bar-nav-icon @click="drawer = !drawer"
@@ -65,9 +91,11 @@
           </div>
         </span>
        </v-col>
-     </v-row>
 
+     </v-row>
    </v-app-bar>
+
+   <v-system-bar height="40"></v-system-bar>
 </template>
 
 <style lang="scss" scoped>
