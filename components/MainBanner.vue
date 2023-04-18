@@ -19,9 +19,9 @@
     background: linear-gradient(180deg, rgba(7 11 50 / 0) 40.6%, rgba(7 11 50 / .3) 100%), url('/images/stadium-banner.jpg') center;
     background-size: cover;
     position: relative;
-    height: 200px;
-    @include xs { height: 250px; };
-    @include sm { height: 350px; };
+    height: 250px;
+    @include xs { height: 350px; };
+    @include sm { height: 400px; };
     @include md { height: 450px; };
     @include lg { height: 500px; };
   }
