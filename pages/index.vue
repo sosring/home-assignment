@@ -4,7 +4,7 @@
 <template>
 
   <MainBanner />
-  <Matches />
+  <Section />
   <v-container></v-container>
 </template>
 

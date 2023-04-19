@@ -37,10 +37,11 @@
           class="mb-2"
           svg="logo-white"/>
 
-          <p class="text-muted font-weight-bold">
-            Get Ticket Alerts, News and more:
-          </p>
-
+            <p class="text-muted font-weight-bold">
+              Get Ticket Alerts, News and more:
+            </p>
+              
+            <base-footer-Form />
         </v-col>
        <v-divider></v-divider>
 
@@ -116,6 +117,7 @@
 </template>
 
 <style lang="scss" scoped>
+
   .title {
     font-weight: 700;
     font-size: clamp(1rem, 2.5vw, 1.2rem);

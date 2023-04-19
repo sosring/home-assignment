@@ -5,7 +5,6 @@
 <template>
 
   <v-app>
-
     <base-header />
 
     <v-main>

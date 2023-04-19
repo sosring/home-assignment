@@ -14,10 +14,11 @@
 
 <template>
 
-  <!-- sidenav -->
-    <v-navigation-drawer absolute="true"
+  <!-- sidenav 
+    <v-navigation-drawer 
      v-model="drawer" tag="aside">
     </v-navigation-drawer>
+  -->
 
     <!-- System bar -->
     <v-system-bar class="px-4 px-sm-12
@@ -77,17 +78,15 @@
      </v-row>
    </v-app-bar>
 
-   <v-system-bar height="40"
-    class="d-flex justify-space-around
-    align-center flex-wrap">
+   <v-system-bar height="40">
 
      <v-breadcrumbs 
-      class="font-weight-bold
-      text-black flex-wrap text-center"
+      class="font-weight-bold text-black 
+      flex-wrap mx-auto justify-center"
       :items="breadcrumbs"
       divider="|"
       icon="mdi-check-circle-outline">
-      </v-breadcrumbs>
+     </v-breadcrumbs>
    </v-system-bar>
 </template>
 

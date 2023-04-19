@@ -8,9 +8,19 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 9rem;
+  @include md { scroll-margin-top: 8rem }
+}
+
 body {
   font-family: $sofia;
-  font-size: 16px;
 }
 
 span {

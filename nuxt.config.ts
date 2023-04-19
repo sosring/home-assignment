@@ -24,9 +24,5 @@ export default defineNuxtConfig({
  nitro: {
    serveStatic: true
  },
- css: [
-    '@/assets/scss/main.scss',
-    '@/assets/scss/_mixins.scss',
-    '@/assets/scss/_variables.scss',
- ]
+ css: [ '/assets/scss/main.scss' ]
 })
