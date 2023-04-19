@@ -13,7 +13,7 @@ const lightTheme = {
   colors: {
     background: '#FFFFFF',
     primary: '#D3D5D7',
-    accent: '#8CED24',
+    accent: '#BCED24',
     footer: '#0D0033'
   } 
 }

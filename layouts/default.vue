@@ -6,12 +6,12 @@
 
   <v-app>
 
-    <layout-NavBar />
+    <base-header />
 
     <v-main>
       <slot />
     </v-main>
 
-    <layout-Footer />
+    <base-footer />
   </v-app>
 </template>
