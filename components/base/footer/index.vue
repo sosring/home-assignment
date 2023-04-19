@@ -40,6 +40,7 @@
           <p class="text-muted font-weight-bold">
             Get Ticket Alerts, News and more:
           </p>
+
         </v-col>
        <v-divider></v-divider>
 
@@ -50,7 +51,7 @@
       <div class="secound-column w-100">
 
         <v-col v-for="item in footerItems"
-         :key="item" class="px-xs-0">
+         :key="item" class="px-0">
 
           <h4 class="title" v-html="item.title"></h4>
 
@@ -64,7 +65,7 @@
         <!-- -----------------------------------------------
         Third Column
       ----------------------------------------------- -->
-        <v-col cols="12" md="3" sm="6" class="px-xs-0">
+        <v-col class="px-0">
           <h4 class="title">Social</h4>
 
           <div class="social-icons mt-5">
@@ -90,11 +91,12 @@
 
      <v-divider></v-divider>
 
-      <div class="footer-bottom-bar mt-sm-5 
-       mt-0 ml-sm-0 ml-n3 font-weight-thin">
+      <div class="mt-sm-5 px-0
+       mt-0 ml-n3 font-weight-thin">
         <div class="d-block d-sm-flex align-center">
             <v-breadcrumbs 
              color="primary"
+             class="flex-wrap px-0"
              :items="['© Football Tickets Live 2021. All rights reserved',
              'Terms & Conditions', 'Terms & Conditions', 'Privacy', 'Cookie Policy']"
              active-color="primary"

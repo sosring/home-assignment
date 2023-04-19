@@ -15,7 +15,8 @@
 <template>
 
   <!-- sidenav -->
-    <v-navigation-drawer v-model="drawer">
+    <v-navigation-drawer absolute="true"
+     v-model="drawer" tag="aside">
     </v-navigation-drawer>
 
     <!-- System bar -->
@@ -82,7 +83,7 @@
 
      <v-breadcrumbs 
       class="font-weight-bold
-      text-black"
+      text-black flex-wrap text-center"
       :items="breadcrumbs"
       divider="|"
       icon="mdi-check-circle-outline">
