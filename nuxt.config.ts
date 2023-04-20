@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
  modules: [
-   '@pinia/nuxt'
+   '@pinia/nuxt',
  ],
+ css: [ '@/assets/scss/main.scss' ],
  ssr: false,
  app: {
    head: {
@@ -23,6 +24,5 @@ export default defineNuxtConfig({
  },
  nitro: {
    serveStatic: true
- },
- css: [ '/assets/scss/main.scss' ]
+ }
 })

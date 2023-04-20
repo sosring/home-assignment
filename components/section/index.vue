@@ -38,7 +38,10 @@
    <v-divider></v-divider>
   </v-container>
 
-  <Section-MatcheUpdates />
+  <Lazy-Section-matches />
+  <!--
+  <Lazy-Section-StadiumInfo />
+  -->
 
 </template>
 

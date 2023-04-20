@@ -1,33 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@100&family=Sofia+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900;1000&family=Sofia+Sans:wght@100&display=swap');
-
-@import 'reset';
+@import 'base';
 @import 'variables';
 @import 'mixins';
 
-* {
-  box-sizing: border-box;
-}
+.ticket {
+  position: relative;
 
-html {
-  height: 100%;
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: .5em;
+    top: calc(.9em - 1px);
+    height: .7em;
+    width: .6em;
+    background: lighten($secoundary, 5);
+  }
 
-section {
-  scroll-margin-top: 9rem;
-  @include md { scroll-margin-top: 8rem }
-}
+  &:before {
+    left: 0px;
+    border-radius: 0 1em 1em 0;
+  }
 
-body {
-  font-family: $sofia;
-}
-
-span {
-  display: flex;
-  gap: 1rem;
-}
-
-a {
-  color: inherit;
+  &:after {
+    right: 0px;
+    border-radius: 1em 0 0 1em;
+  }
 }

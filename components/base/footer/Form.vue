@@ -24,7 +24,6 @@
           ></v-text-field>
         </v-col>
 
-      <v-col cols="12" md="4">
         <v-btn type="submit"
          color="accent"
          rounded="0"
@@ -33,8 +32,7 @@
          class="py-1">
           Stay Updated
         </v-btn>
-       </v-col>
-       
+
       </v-row>
     </v-container>
   </v-form>

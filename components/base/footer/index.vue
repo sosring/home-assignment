@@ -92,8 +92,7 @@
 
      <v-divider></v-divider>
 
-      <div class="mt-sm-5 px-0
-       mt-0 ml-n3 font-weight-thin">
+      <div class="copy-right mt-sm-5 px-0 mt-0 ml-n3">
         <div class="d-block d-sm-flex align-center">
             <v-breadcrumbs 
              color="primary"
@@ -132,5 +131,10 @@
   .secound-column {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  }
+
+  .copy-right {
+    font-size: clamp(.8rem, 2.5vw, .9rem);
+    font-weight: 400;
   }
 </style>

@@ -84,9 +84,15 @@
       class="font-weight-bold text-black 
       flex-wrap mx-auto justify-center"
       :items="breadcrumbs"
-      divider="|"
-      icon="mdi-check-circle-outline">
+      divider="|">
+       <template #title="{item}">
+         <v-icon color="accent">
+          mdi-check-circle-outline
+         </v-icon>
+         {{item}}
+       </template>
      </v-breadcrumbs>
+
    </v-system-bar>
 </template>
 

@@ -7,7 +7,7 @@
   <v-app>
     <base-header />
 
-    <v-main>
+    <v-main class="fill-height">
       <slot />
     </v-main>
 
