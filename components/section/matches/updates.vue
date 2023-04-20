@@ -4,7 +4,7 @@
 
   const matches = ref(null)
 
-  onMounted(async () => {
+  onBeforeMount(async () => {
     const { data } = await useFootball.getMatcheUpdates()
     matches.value = data
   })
@@ -33,7 +33,6 @@
 
   <v-pagination 
    :length="2"
-   size="small"
    density="compact"
    variant="plain"
    class="mt-4">

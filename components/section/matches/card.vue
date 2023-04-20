@@ -12,15 +12,15 @@
   bg-grey-lighten-2">
 
  <v-row>
-  <v-col md="3" lg="2"
-   class="hidden-sm-and-down pa-3">
+  <v-col cols="3" lg="2"
+   class="hidden-xs-and-down pa-2">
     <div class="bg-black h-100">
     </div>
   </v-col>
 
   <v-col class="pa-4">
-   <v-row class="d-flex
-    flex-md-row py-2">
+   <v-row class="d-flex flex-column 
+   flex-sm-row py-2 align-center">
 
     <!-- Team's Logo -->
     <v-col cols="4" sm="2"
@@ -49,7 +49,7 @@
         <v-btn
          color="accent"
          append-icon="mdi-arrow-right"
-         class="ticket px-4 font-weight-bold">
+         class="ticket px-4 font-weight-black">
          Buy
         </v-btn>
      </v-col>
@@ -77,6 +77,6 @@
 
 <style lang="scss" scoped>
   .text-responsive {
-    font-size: clamp(.9rem, 2.5vw, 1rem);
+    font-size: clamp(.8rem, 2.5vw, 1rem);
   }
 </style>
