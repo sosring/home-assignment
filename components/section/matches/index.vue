@@ -5,12 +5,12 @@
 
   <v-container fluid tag="section" 
    id="Upcoming Matches" class="px-4
-   pl-md-16">
+   pl-md-16 pr-md-0 pt-0">
 
      <v-row>
 
      <!-- Filter option -->
-      <v-col cols="12" sm="4"
+      <v-col cols="12" md="4"
        class="mr-sm-4 mr-md-12">
 
         <Section-matches-filter />

@@ -13,7 +13,9 @@
 
  <v-row>
   <v-col md="3" lg="2"
-   class="hidden-sm-and-down bg-black">
+   class="hidden-sm-and-down pa-3">
+    <div class="bg-black h-100">
+    </div>
   </v-col>
 
   <v-col class="pa-4">
@@ -25,11 +27,13 @@
      class="d-flex py-1">
       <v-img
        height="40"
+       lazy-src
        :src="matche.team1_logo">
       </v-img>
 
       <v-img
        height="40"
+       lazy-src
        :src="matche.team2_logo">
       </v-img>
     </v-col>
@@ -72,8 +76,6 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '@/assets/scss/main';
-
   .text-responsive {
     font-size: clamp(.9rem, 2.5vw, 1rem);
   }

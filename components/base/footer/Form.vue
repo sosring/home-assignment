@@ -39,16 +39,9 @@
 </template>
 
 <style lang="scss" scoped>
- @import '@/assets/scss/mixins';
   
   .v-form {
     width: 100%;
     @include sm { width: 50% }
-  }
-
-  .v-btn {
-    :hover {
-      /* background: lighten($accent, 20); */
-    }
   }
 </style>

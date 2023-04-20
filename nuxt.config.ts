@@ -4,6 +4,19 @@ export default defineNuxtConfig({
    '@pinia/nuxt',
  ],
  css: [ '@/assets/scss/main.scss' ],
+ vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+           @import "@/assets/scss/_base";
+           @import "@/assets/scss/_variables";
+           @import "@/assets/scss/_mixins";
+           `
+        },
+      },
+    },
+ },
  ssr: false,
  app: {
    head: {

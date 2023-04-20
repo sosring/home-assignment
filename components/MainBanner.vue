@@ -13,7 +13,6 @@
 </template>
 
 <style lang="scss" scoped>
- @import '@/assets/scss/main';
 
   .v-container {
     background: linear-gradient(180deg, rgba(7 11 50 / 0) 40.6%, rgba(7 11 50 / .3) 100%), url('/images/stadium-banner.jpg') center;

@@ -12,7 +12,7 @@ export const useFootballStore = defineStore('useFootball', {
         return await res.data.data
       }
       catch (err) {
-        console.log(err.response.data.message)
+        return err.response.data.message
       }
     }
   }

@@ -2,7 +2,7 @@
   import { useFootballStore } from '~/stores/useFootballStore.js'
   const useFootball = useFootballStore()
 
-  const matches = ref('')
+  const matches = ref(null)
 
   onMounted(async () => {
     const { data } = await useFootball.getMatcheUpdates()
@@ -11,7 +11,8 @@
 </script>
 
 <template>
- <v-container class="pa-0">
+
+ <v-container>
   <v-sheet
    color="grey-lighten-4"
    class="pa-4 pa-sm-8 pa-md-12">
@@ -22,10 +23,11 @@
 
     <div class="card-list-wrapper">
 
-     <Section-matches-card 
+     <Lazy-Section-matches-card 
       v-for="matche in matches"
       :matche="matche"
       :key="matche.id"/>
+
     </div>
   </v-sheet>
 
