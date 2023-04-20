@@ -13,26 +13,29 @@
 
  <v-row>
   <v-col cols="3" lg="2"
-   class="hidden-xs-and-down pa-2">
+   class="hidden-sm-and-down pa-2">
     <div class="bg-black h-100">
     </div>
   </v-col>
 
   <v-col class="pa-4">
    <v-row class="d-flex flex-column 
-   flex-sm-row py-2 align-center">
+   flex-lg-row py-2 align-lg-center">
 
     <!-- Team's Logo -->
-    <v-col cols="4" sm="2"
-     class="d-flex py-1">
+    <v-col cols="6" lg="3"
+     class="d-flex py-1 
+      align-center">
       <v-img
-       height="40"
+       height="50"
        lazy-src
        :src="matche.team1_logo">
       </v-img>
 
+      <p class="font-weight-bold px-2">VS</p>
+
       <v-img
-       height="40"
+       height="50"
        lazy-src
        :src="matche.team2_logo">
       </v-img>
@@ -46,12 +49,15 @@
         <h3 v-html="matche.fixture_name"></h3>
        </div>
 
+       <div class="ticket">
         <v-btn
          color="accent"
+         rounded="0"
          append-icon="mdi-arrow-right"
-         class="ticket px-4 font-weight-black">
+         class="px-5 font-weight-black">
          Buy
         </v-btn>
+       </div>
      </v-col>
    </v-row>
 
@@ -76,6 +82,7 @@
 </template>
 
 <style lang="scss" scoped>
+
   .text-responsive {
     font-size: clamp(.8rem, 2.5vw, 1rem);
   }

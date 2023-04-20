@@ -3,22 +3,20 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  outline: none;
-  user-select: none;
-  text-decoration: none;
   list-style-type: none;
+  text-transform: none;
   text-decoration: none;
 }
 
 html {
-  height: 100%;
   font-size: 16px;
+  position: relative;
   scroll-behavior: smooth;
-  height: -webkit-fill-available;
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
+  min-height: 100vh;
   font-family: $sofia;
 }
 

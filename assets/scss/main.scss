@@ -9,11 +9,11 @@
   &:after {
     content: '';
     position: absolute;
-    top: .7em;
-    top: calc(.9em - 1px);
+    top: calc(.7em - 1px);
     height: .9em;
-    width: .6em;
-    background: lighten($secoundary, 5);
+    width: .5em;
+    background: lighten($secoundary, 5); 
+    z-index: 1;
   }
 
   &:before {

@@ -1,13 +1,15 @@
 <script setup>
   const props = defineProps({
-    svg: String
-  });
+    svg: String,
+    width: Number
+  })
 </script>
 
 <template>
 
   <nuxt-link to="/" color="black">
     <v-img cover
+     :width="width"
      :src="`/svgs/${svg}.svg`"
      alt="Football ticket logo"
      class="logo">
@@ -16,7 +18,6 @@
 </template>
 
 <style lang="scss" scoped>
- @import '@/assets/scss/main';
 
   .logo {
     width: 104px;

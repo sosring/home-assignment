@@ -12,10 +12,10 @@
 <template>
 
   <v-card
-    elevation="4"
-    :loading="loading"
-    class="mx-auto mt-sm-8"
-    max-width="374">
+   elevation="4"
+   :loading="loading"
+   class="mx-auto"
+   max-width="374">
     <template v-slot:loader="{ isActive }">
       <v-progress-linear
         :active="isActive"

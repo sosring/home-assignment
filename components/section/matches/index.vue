@@ -3,25 +3,26 @@
 
 <template>
 
-  <v-container fluid tag="section" 
-   id="Upcoming Matches" class="px-4
-   pl-md-16 pr-md-0 pt-0">
+ <section id="Upcoming Matches">
+  <v-container fluid 
+   class="px-4 pr-sm-0 pt-0">
 
-     <v-row>
-
+    <v-row>
      <!-- Filter option -->
-      <v-col cols="12" md="4"
-       class="mr-sm-4 mr-md-12">
+      <v-col cols="12" sm="4" 
+       class="mt-4 mt-md-14">
 
         <Section-matches-filter />
       </v-col>
 
       <!-- Upcoming matche updates -->
-      <v-col class="pa-sm-0">
+      <v-col>
         <Section-matches-updates />
       </v-col>
+
     </v-row>
   </v-container>
+ </section>
 </template>
 
 <style lang="scss" scoped>

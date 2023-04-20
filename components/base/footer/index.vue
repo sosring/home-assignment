@@ -19,29 +19,24 @@
   <!-- -----------------------------------------------
         Start Footer
   ----------------------------------------------- -->
-  <v-footer class="footer px-4
-   px-sm-8"
+  <v-footer class="footer px-4 px-sm-8"
    color="footer">
 
     <v-container fluid>
-      <v-row class="py-6 py-sm-7">
+      <v-row>
         <!-- -----------------------------------------------
         First Column
       ----------------------------------------------- -->
         <v-col cols="12" 
          class="d-flex align-md-center
-         px-xs-0 justify-space-between
+         px-0 justify-space-between
          flex-column flex-md-row">
 
-         <base-logo 
-          class="mb-2"
-          svg="logo-white"/>
+           <base-logo 
+            class="mb-2"
+            svg="logo-white"/>
 
-            <p class="text-muted font-weight-bold">
-              Get Ticket Alerts, News and more:
-            </p>
-              
-            <base-footer-Form />
+           <base-footer-Form />
         </v-col>
        <v-divider></v-divider>
 

@@ -12,12 +12,12 @@
       })
     },
     {
-      rootMargin: '0px 0px -90px 0px',
+      rootMargin: '0px 0px -90px 0px'
     }
     );
     document.querySelectorAll('section').forEach(section => {
       observer.observe(section)
-      currentSection.value = section.id
+//      currentSection.value = section.id
     })
   })
 </script>
@@ -38,10 +38,8 @@
    <v-divider></v-divider>
   </v-container>
 
-  <Lazy-Section-matches />
-  <!--
-  <Lazy-Section-StadiumInfo />
-  -->
+  <Section-matches />
+  <Section-StadiumInfo />
 
 </template>
 

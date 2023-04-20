@@ -5,6 +5,7 @@
   const matches = ref(null)
 
   onBeforeMount(async () => {
+    // Nested data    
     const { data } = await useFootball.getMatcheUpdates()
     matches.value = data
   })
@@ -12,7 +13,7 @@
 
 <template>
 
- <v-container>
+ <v-container class="pa-0">
   <v-sheet
    color="grey-lighten-4"
    class="pa-4 pa-sm-8 pa-md-12">
@@ -42,6 +43,7 @@
 </template>
 
 <style lang="scss" scoped>
+
   .title {
     font-size: clamp(1.1rem, 5vw, 1.7rem);
     font-weight: 600;
