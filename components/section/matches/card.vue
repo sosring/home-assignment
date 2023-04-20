@@ -3,6 +3,22 @@
   const props = defineProps({
    matche: Object 
   });
+
+  const dateFormatter = computed(() => {
+      // formatting YYYY-MM-DD to MM-DD-YYYY
+      const _date = props.matche.fixture_date.split('-');
+      const dateObj = {month: _date[1], day: _date[2], year: _date[0]};
+
+      const formattedDate = `${dateObj.month}  ${dateObj.day}  ${dateObj.year}`
+
+      const month = ["Jan","Feb","Mar","Apr","May",
+      "June","July", "Aug","Sept","Oct","Nov","Dec"];
+
+      return {
+        day: dateObj.day,
+        month: month[new Date(formattedDate).getMonth()]
+      }
+  }) 
 </script>
 
 <template>
@@ -13,8 +29,14 @@
 
  <v-row>
   <v-col cols="3" lg="2"
-   class="hidden-sm-and-down pa-2">
-    <div class="bg-black h-100">
+   class="hidden-sm-and-down
+   pa-sm-6">
+
+    <div class="bg-white calendar-top">
+      {{ dateFormatter.day }}
+    </div>
+    <div class="bg-black calendar-bottom">
+      {{ dateFormatter.month }}
     </div>
   </v-col>
 
@@ -85,5 +107,45 @@
 
   .text-responsive {
     font-size: clamp(.8rem, 2.5vw, 1rem);
+  }
+
+  @mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .calendar-top {
+    @include flexCenter;
+    position: relative;
+    height: 70%;
+    font-size: clamp(1rem, 2.5vw, 2.4rem);
+    font-family: monospace;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: -10%;
+      height: .9rem;
+      width: .3rem;
+      background: darken($secoundary, 10); 
+      z-index: 1;
+    }
+
+    &:before {
+      left: 30%;
+    }
+
+    &:after {
+      right: 30%;
+    }
+  }
+
+  .calendar-bottom {
+    @include flexCenter;
+    height: 30%;
+    font-size: clamp(.8rem, 2.5vw, 1.2rem);
+    text-transform: uppercase;
   }
 </style>

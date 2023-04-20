@@ -20,10 +20,10 @@
 
    <v-row>
     <v-col cols="12"
-     class="py-8 d-flex 
-     justify-center">
+     class="py-6 d-flex 
+     justify-start">
       <base-logo 
-       width="204"
+       width="180"
        svg="logo"/>
      </v-col>
 

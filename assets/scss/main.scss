@@ -9,9 +9,9 @@
   &:after {
     content: '';
     position: absolute;
-    top: calc(.7em - 1px);
-    height: .9em;
-    width: .5em;
+    top: calc(.7rem - 1px);
+    height: .9rem;
+    width: .5rem;
     background: lighten($secoundary, 5); 
     z-index: 1;
   }

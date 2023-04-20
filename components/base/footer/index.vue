@@ -52,15 +52,13 @@
           <h4 class="title" v-html="item.title"></h4>
 
           <ul>
-            <li v-for="link in item.links"
+            <li 
+            v-for="link in item.links"
              :key="link"
              v-html="link"></li>
           </ul>
         </v-col>
 
-        <!-- -----------------------------------------------
-        Third Column
-      ----------------------------------------------- -->
         <v-col class="px-0">
           <h4 class="title">Social</h4>
 
