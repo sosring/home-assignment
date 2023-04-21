@@ -86,7 +86,9 @@
 
    <v-divider></v-divider>
 
-    <v-row class="d-flex py-2">
+    <v-row align="center" class="py-2">
+     <v-col cols="12" lg="6"
+      class="d-flex pa-0">
       <span class="mr-2">
         <v-icon color="grey-darken-1">mdi-soccer-field</v-icon>
         <p>kickoff: {{matche.start_time}}</p>
@@ -96,6 +98,11 @@
         target="blank" class="ml-2">
         {{ matche.stadium_name }},{{ matche.stadium_city}}
        </a>
+     </v-col>
+
+     <v-col class="d-flex pa-0">
+       <p>Tickets from: £58.00</p>
+     </v-col>
     </v-row>
 
    </v-col>

@@ -24,12 +24,13 @@
 
       <v-row align="start" 
        class="py-4 py-sm-6 py-md-8">
-        <v-col cols="12" md="5"
-         align="center">
 
-          <v-img
-           width="400"
-           cover
+        <v-col cols="12" md="5" 
+         rounded="0" align="center" 
+         class="pb-8">
+
+          <v-img cover
+           class="stadium-img w-75"
            alt="stadium info picture"
            lazy-src="/images/stadium-info.jpg"
            src="/images/stadium-info.jpg">
@@ -38,7 +39,7 @@
 
         <v-col class="py-0">
           <div v-if="stadium">
-            <h3 class="title mb-4">{{ stadium.name }}</h3>
+            <h3 class="title mb-sm-4">{{ stadium.name }}</h3>
             <div v-html="stadium.description" 
              class="paragraph-wrapper"></div>
           </div>
@@ -53,7 +54,7 @@
 <style lang="scss" scoped>
 
   .title {
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(1.5rem, 5vw, 2rem);
     font-weight: 500;
   }
 
@@ -66,6 +67,7 @@
 
   .stadium-img {
     position: relative;
+    overflow: visible;
     transform-style: preserve-3d;
 
     &:after {
@@ -74,7 +76,7 @@
       height: 100%;
       width: 100%;
       background: lighten($accent, 5); 
-      transform: translate(.5rem, .7rem) translateZ(-1px);
+      transform: translate(.7rem, 1rem) translateZ(-1px);
     }
   }
 </style>

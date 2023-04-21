@@ -30,11 +30,23 @@
     </div>
   </v-sheet>
 
-  <v-pagination 
-   :length="2"
-   density="compact"
-   variant="plain"
+  <v-pagination :length="2"
+   aria-label="matches pagination"
+   density="compact" variant="plain" 
    class="mt-4">
+
+   <template #prev>
+   </template>
+
+   <template #next>
+    <v-btn 
+     size="small"
+     variant="plain"
+     color="black"
+     append-icon="mdi-arrow-right">
+       View all
+    </v-btn>
+   </template>
   </v-pagination>
 
  </article>
