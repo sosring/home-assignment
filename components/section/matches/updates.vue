@@ -4,7 +4,7 @@
 
   const matches = ref(null)
 
-  onBeforeMount(async () => {
+  onMounted(async () => {
     // Nested data    
     const { data } = await useFootball.getMatcheUpdates()
     matches.value = data
@@ -13,9 +13,8 @@
 
 <template>
 
- <v-container class="pa-0">
-  <v-sheet
-   color="grey-lighten-4"
+ <article>
+  <v-sheet color="grey-lighten-4"
    class="pa-4 pa-sm-8 pa-md-12">
 
     <h3 class="title mb-4 mb-sm-6">
@@ -28,7 +27,6 @@
       v-for="matche in matches"
       :matche="matche"
       :key="matche.id"/>
-
     </div>
   </v-sheet>
 
@@ -39,7 +37,7 @@
    class="mt-4">
   </v-pagination>
 
- </v-container>
+ </article>
 </template>
 
 <style lang="scss" scoped>

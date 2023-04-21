@@ -23,14 +23,12 @@
 
 <template>
 
- <v-card 
-  class="d-flex text-responsive 
+ <v-card class="d-flex text-responsive 
   bg-grey-lighten-2">
 
  <v-row>
   <v-col cols="3" lg="2"
-   class="hidden-sm-and-down
-   pa-sm-6">
+   class="hidden-sm-and-down pa-sm-6">
 
     <div class="bg-white calendar-top">
       {{ dateFormatter.day }}
@@ -50,7 +48,8 @@
       align-center">
       <v-img
        height="50"
-       lazy-src
+       alt="Team 1 logo"
+       :lazy-src="matche.team1_logo"
        :src="matche.team1_logo">
       </v-img>
 
@@ -59,6 +58,8 @@
       <v-img
        height="50"
        lazy-src
+       alt="Team 2 logo"
+       :lazy-src="matche.team2_logo"
        :src="matche.team2_logo">
       </v-img>
     </v-col>
@@ -75,9 +76,9 @@
         <v-btn
          color="accent"
          rounded="0"
-         append-icon="mdi-arrow-right"
          class="px-5 font-weight-black">
-         Buy
+          <span> Buy </span>
+          <v-icon size="small">mdi-arrow-right</v-icon>
         </v-btn>
        </div>
      </v-col>
@@ -148,4 +149,29 @@
     font-size: clamp(.8rem, 2.5vw, 1.2rem);
     text-transform: uppercase;
   }
+
+.ticket {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(.7rem - 1px);
+    height: .9rem;
+    width: .5rem;
+    background: lighten($secoundary, 5); 
+    z-index: 1;
+  }
+
+  &:before {
+    left: 0px;
+    border-radius: 0 1em 1em 0;
+  }
+
+  &:after {
+    right: 0px;
+    border-radius: 1em 0 0 1em;
+  }
+}
 </style>

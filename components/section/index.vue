@@ -17,19 +17,19 @@
     );
     document.querySelectorAll('section').forEach(section => {
       observer.observe(section)
-//      currentSection.value = section.id
+      currentSection.value = section.id
     })
   })
 </script>
 
 <template>
   
-  <v-container class="pa-0" fluid>
+  <v-container fluid class="pb-0">
 
    <v-tabs v-model="currentSection" 
     slider-color="accent" align-tabs="center">
       <v-tab v-for="tab in tabs"
-       :key="tab" class="pt-1 mb-2"
+       :key="tab" class="px-sm-6"
        :value="tab"
        :href="`#${tab}`">
         {{ tab }}
@@ -39,7 +39,8 @@
   </v-container>
 
   <Section-matches />
-  <Section-StadiumInfo />
+  <Section-stadium-info />
+  <Section-FAQs />
 
 </template>
 

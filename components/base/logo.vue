@@ -11,7 +11,7 @@
     <v-img cover
      :width="width"
      :src="`/svgs/${svg}.svg`"
-     alt="Football ticket logo"
+     alt="Brand logo"
      class="logo">
     </v-img>
   </nuxt-link>

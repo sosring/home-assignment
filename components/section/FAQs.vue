@@ -10,14 +10,14 @@
 
     <v-row>
       <v-col cols="12" md="4">
-        helo
       </v-col>
 
       <v-col cols="12">
       </v-col>
     </v-row>
   </v-container>
-  
+ </section>
+
 </template>
 
 <style>

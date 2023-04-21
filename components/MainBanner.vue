@@ -6,9 +6,13 @@
 
 <template>
   <v-container fluid class="pa-0">
+
     <v-img
+     alt="Old Tradfford Logo"
      src="/svgs/old-trafford.svg">
     </v-img>
+
+    <!-- Need to add a snackbar -->
   </v-container>
 </template>
 

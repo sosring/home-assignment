@@ -49,7 +49,7 @@
   <base-header-SystemBar />
 
   <!-- NavBar -->
-  <v-app-bar elevation="0"
+  <v-app-bar elevation="0" 
    class="px-4 px-md-12 py-0">
 
    <v-row align="center"
