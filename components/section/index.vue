@@ -24,7 +24,7 @@
 
 <template>
   
-  <v-container fluid class="pb-0">
+  <v-container fluid class="py-0">
 
    <v-tabs v-model="currentSection" 
     slider-color="accent" align-tabs="center">
