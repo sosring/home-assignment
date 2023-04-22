@@ -1,4 +1,6 @@
 <script setup>
+  const currentTab = useState('currentSection', () => 0) 
+  const tabs = ['Places to visit', 'Restaurant', 'Shopping Centre', 'Transport', 'Popular']
 
   const props = defineProps({
     stadium: Object
@@ -11,7 +13,7 @@
    class="pa-md-8" tag="section">
     <h3 class="title mb-4">{{ stadium.name }} History & Facts</h3>
 
-    <v-row class="conatiner ma-0"
+    <v-row class="conatiner ma-0 flex-wrap"
      justify="space-between"
      v-for="i in 3" :key="i">
 
@@ -35,9 +37,75 @@
   <v-container fluid tag="section">
     <v-row>
       <v-col cols="12" md="6">
+       <v-card tag="article">
+        <h3 class="title">{{ stadium.name }}</h3>
+        <span class="mt-4">
+          <v-icon color="grey">mdi-map-marker</v-icon>
+          <p>
+           {{ stadium.address_line_two }}
+           {{ stadium.address_line_one }} 
+           {{ stadium.country }} 
+           {{ stadium.postcode }}
+          </p>
+        </span>
 
+        <span>
+          <v-icon color="grey">mdi-soccer-field</v-icon>
+          <p>Stadium Capacity: <b>{{ stadium.capacity }}</b></p>
+        </span>
+
+        <span class="mt-4">
+          <v-btn rounded="0"
+           append-icon="mdi-arrow-right"
+           class="font-weight-bold"
+           variant="outlined">
+            Getting there
+          </v-btn>
+
+          <v-btn rounded="0"
+           :href="stadium.map_url"
+           target="blank"
+           append-icon="mdi-arrow-right"
+           class="font-weight-bold"
+           variant="outlined">
+            View on map
+          </v-btn>
+        </span>
+
+        <div v-html="stadium.description"
+         class="paragraph-wrapper mt-6"></div>
+       </v-card>
       </v-col>
-      <v-col cols="12" md="6"></v-col>
+
+      <v-col cols="12" md="6"
+       class="pa-sm-8">
+        <v-card tag="article"
+         class="border h-100 rounded-lg
+         pa-4 px-md-12 py-md-8">
+          <span>
+            <v-icon size="x-large"
+             color="grey">mdi-map-marker-radius-outline</v-icon>
+            <p class="title">What's nearby</p>
+          </span>
+
+         <v-tabs v-model="currentTab" class="mt-2"
+          slider-color="accent" align-tabs="center">
+            <v-tab v-for="(tab, index) in tabs"
+             :key="tab" :value="index">
+              {{ tab }}
+            </v-tab>
+          </v-tabs>
+
+        <div class="mt-4">
+          <span class="justify-space-between mt-2"
+           v-for="i in 7" :key="i">
+            <p class="font-weight-bold">Place of interest</p>
+            <p>0.8mile</p>
+          </span>
+        </div>
+
+        </v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>

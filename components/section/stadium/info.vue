@@ -34,13 +34,6 @@
 
 <style lang="scss" scoped>
 
-  .paragraph-wrapper {
-    font-size: clamp(.8rem, 2.5vw, 1rem);
-    font-weight: 300;
-    display: grid;
-    gap: .5rem;
-  }
-
   .stadium-img {
     position: relative;
     overflow: visible;
