@@ -39,7 +39,7 @@
   </v-container>
 
   <Section-matches />
-  <Section-stadium-info />
+  <Section-stadium />
   <Section-FAQs />
 
 </template>

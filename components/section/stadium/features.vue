@@ -17,7 +17,7 @@
 
       <li v-for="item in items"
        :key="item.title"
-       class="d-flex justify-center align-center">
+       class="d-flex justify-center align-end">
 
        <div class="item-wrapper px-4 px-md-10">
 
@@ -38,7 +38,7 @@
 
   .items-container {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
 
      li {
       gap: .5rem;
