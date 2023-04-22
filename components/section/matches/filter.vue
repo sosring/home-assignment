@@ -7,7 +7,7 @@
 
 <template>
 
-  <v-card elevation="4" class="mx-auto"
+  <v-card elevation="4" 
    v-if="result" max-width="412">
 
     <div class="d-flex py-2 px-4 

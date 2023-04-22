@@ -77,10 +77,11 @@
      </v-row>
    </v-app-bar>
 
+  <!-- Breadcrumbs -->
    <v-system-bar height="40">
      <v-breadcrumbs 
-      class="font-weight-bold text-black 
-      flex-wrap mx-auto justify-center"
+      class="text-black mx-auto flex-wrap 
+      justify-center justify-md-space-around"
       :items="breadcrumbs"
       divider="|">
        <template #title="{ item }">
@@ -89,7 +90,7 @@
           mdi-check-circle-outline
          </v-icon>
 
-         <p> {{item}} </p>
+         <p class="text-caption font-weight-bold"> {{item}} </p>
        </template>
      </v-breadcrumbs>
 
@@ -106,8 +107,7 @@
     font-weight: 900 !important
   }
 
-  .v-breadcrumbs-item {
-    padding: 1rem;
-    background: red;
+  .v-breadcrumbs {
+    @include md { width: 70% }
   }
 </style>
