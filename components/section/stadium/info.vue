@@ -8,7 +8,7 @@
 <template>
 
   <v-row align="start" 
-   class="py-4 py-md-8">
+   class="px-0 py-4 pa-md-8">
 
     <v-col cols="12" md="5" 
      rounded="0" class="pb-8">

@@ -13,9 +13,8 @@
 <template>
 
  <section id="Stadium Information">
-
-   <v-row>
-    <v-container fluid 
+   <v-row class="ma-0">
+    <v-container  fluid
      class="pa-0 pt-sm-8 bg-grey-lighten-4">
 
       <v-col cols="12">

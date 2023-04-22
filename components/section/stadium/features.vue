@@ -19,7 +19,7 @@
        :key="item.title"
        class="d-flex justify-center align-end">
 
-       <div class="item-wrapper px-4 px-md-10">
+       <div class="item-wrapper h-100 w-100 px-4">
 
         <v-img
          width="50"
@@ -38,7 +38,7 @@
 
   .items-container {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
 
      li {
       gap: .5rem;

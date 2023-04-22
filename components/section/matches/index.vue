@@ -5,12 +5,12 @@
 
  <section id="Upcoming Matches">
   <v-container fluid 
-   class="pa-4 pr-sm-0 pt-md-0 pb-md-16">
+   class="py-4 pr-sm-0 pt-sm-0 pb-sm-16">
 
     <v-row>
      <!-- Filter option -->
       <v-col cols="12" sm="4" 
-       class="mt-md-14">
+       class="mt-sm-6 mt-md-14">
 
         <Section-matches-filter />
       </v-col>
