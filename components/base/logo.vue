@@ -1,7 +1,7 @@
 <script setup>
   const props = defineProps({
     svg: String,
-    width: Number
+    width: String 
   })
 </script>
 

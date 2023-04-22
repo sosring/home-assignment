@@ -24,7 +24,8 @@
 <template>
 
  <v-card class="d-flex text-responsive 
-  bg-grey-lighten-2">
+  bg-grey-lighten-2" 
+  :loading="!matche">
 
  <v-row>
   <v-col cols="3" lg="2"
