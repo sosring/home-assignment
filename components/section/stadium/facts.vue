@@ -1,5 +1,5 @@
 <script setup>
-  const currentTab = useState('currentSection', () => 0) 
+  const currentTab = ref('Places to visit') 
   const tabs = ['Places to visit', 'Restaurant', 'Shopping Centre', 'Transport', 'Popular']
 
   const props = defineProps({
@@ -10,20 +10,20 @@
 <template>
 
   <v-container fluid 
-   class="pa-md-8" tag="section">
+   class="px-0 pa-sm-4 pa-lg-16">
     <h3 class="title mb-4">{{ stadium.name }} History & Facts</h3>
 
-    <v-row class="conatiner ma-0 flex-wrap"
+    <v-row class="container ma-0 flex-wrap"
      justify="space-between"
      v-for="i in 3" :key="i">
 
-      <v-col cols="6" sm="3"
-       class="d-flex justify-space-between">
+      <v-col sm="3"
+       class="d-flex justify-space-between ">
         <p class="font-weight-bold">Established:</p>
         <p>1993</p>
       </v-col>
 
-      <v-col cols="6" sm="3" v-for="i in 2" :key="i"
+      <v-col sm="3" v-for="i in 2" :key="i"
        class="d-flex justify-space-between">
         <p class="font-weight-bold">Fact:</p>
         <p>Fact Answer</p>
@@ -34,7 +34,9 @@
 
   <v-divider></v-divider>
 
-  <v-container fluid tag="section">
+  <v-container fluid
+   class="px-0 pa-sm-4 pa-lg-16"> 
+
     <v-row>
       <v-col cols="12" md="6">
        <v-card tag="article">
@@ -77,26 +79,24 @@
        </v-card>
       </v-col>
 
-      <v-col cols="12" md="6"
-       class="pa-sm-8">
+      <v-col cols="12" md="6" class="pa-sm-8">
         <v-card tag="article"
-         class="border h-100 rounded-lg
+         class="border rounded-lg
          pa-4 px-md-12 py-md-8">
           <span>
-            <v-icon size="x-large"
-             color="grey">mdi-map-marker-radius-outline</v-icon>
+            <v-icon color="grey">mdi-map-marker-radius-outline</v-icon>
             <p class="title">What's nearby</p>
           </span>
 
          <v-tabs v-model="currentTab" class="mt-2"
           slider-color="accent" align-tabs="center">
-            <v-tab v-for="(tab, index) in tabs"
-             :key="tab" :value="index">
+            <v-tab v-for="tab in tabs"
+             :key="tab" :value="tab">
               {{ tab }}
             </v-tab>
           </v-tabs>
 
-        <div class="mt-4">
+        <div class="mt-4 container">
           <span class="justify-space-between mt-2"
            v-for="i in 7" :key="i">
             <p class="font-weight-bold">Place of interest</p>
@@ -108,11 +108,13 @@
       </v-col>
     </v-row>
   </v-container>
+
+  <v-divider></v-divider>
 </template>
 
 <style lang="scss" scoped>
 
   .container {
-    font-size: clamp(.7rem, 2.5vw, 1rem);
+    font-size: clamp(.8rem, 2.5vw, 1rem);
   }
 </style>

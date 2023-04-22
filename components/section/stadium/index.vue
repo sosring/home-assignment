@@ -15,7 +15,7 @@
  <section id="Stadium Information">
    <v-row class="ma-0">
     <v-container  fluid
-     class="pa-0 pt-sm-8 bg-grey-lighten-4">
+     class="pa-0 pa-sm-4 px-lg-16 bg-grey-lighten-4">
 
       <v-col cols="12">
         <Section-stadium-features/>

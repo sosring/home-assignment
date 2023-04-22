@@ -15,7 +15,7 @@
 
  <article>
   <v-sheet color="grey-lighten-4"
-   class="pa-4 pa-sm-8 pa-md-12">
+   class="pa-4 pt-sm-0 pa-sm-8 pa-md-12">
 
     <h3 class="title mb-4 mb-sm-6">
       Upcoming Old Trafford Matches

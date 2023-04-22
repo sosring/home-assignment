@@ -1,19 +1,10 @@
 <script setup>
-  const loading = ref(false)
-  const selection = ref(1)
-
-  function reserve () {
-    this.loading = true
-
-    setTimeout(() => (this.loading = false), 2000)
-  }
 </script>
 
 <template>
 
   <v-card
    elevation="4"
-   :loading="loading"
    class="mx-auto"
    max-width="374">
     <template v-slot:loader="{ isActive }">

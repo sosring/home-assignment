@@ -1,5 +1,5 @@
 <script setup>
-  const currentSection = useState('currentSection', () => 'Upcoming Matches') 
+  const currentSection = ref('Upcoming Matches') 
   const tabs = ['Upcoming Matches', 'Stadium Information', 'FAQs']
 
   // Intersection Observer
