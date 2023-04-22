@@ -29,14 +29,13 @@
       ----------------------------------------------- -->
         <v-col cols="12" 
          class="d-flex align-md-center
-         px-0 justify-space-between
-         flex-column flex-md-row">
+         justify-space-between flex-column
+         flex-md-row px-0">
 
-           <base-logo 
-            class="mb-2"
-            svg="logo-white"/>
+          <base-logo 
+           svg="logo-white"/>
 
-           <base-footer-Form />
+          <base-footer-Form />
         </v-col>
        <v-divider></v-divider>
 
@@ -60,24 +59,24 @@
         </v-col>
 
         <v-col class="px-0">
-          <h4 class="title">Social</h4>
+          <div>
+            <h4 class="title">Buy Football Tickets</h4>
+            <ul>
+              <li>Premier League tickets</li>
+              <li>FA Cup Tickets</li>
+            </ul>
+          </div>
 
-          <div class="social-icons mt-5">
-            <a href="#">
-              <i class="mdi mdi-facebook"></i>
-            </a>
-            <a href="#">
-              <i class="mdi mdi-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="mdi mdi-google-plus"></i>
-            </a>
-            <a href="#">
-              <i class="mdi mdi-youtube"></i>
-            </a>
-            <a href="#">
-              <i class="mdi mdi-instagram"></i>
-            </a>
+          <div class="mt-4">
+            <h4 class="title">We Accept</h4>
+
+             <span class="d-flex w-50">
+              <v-img
+               v-for="card in ['mastercard', 'maestro', 'visa', 'american_express']" 
+               :key="card"
+               :src="`/svgs/${card}.svg`">
+              </v-img>
+             </span>
           </div>
         </v-col>
       </div>
@@ -85,6 +84,9 @@
 
      <v-divider></v-divider>
 
+  <!-- -----------------------------------------------
+    END COLUMN
+  ----------------------------------------------- -->
       <div class="copy-right mt-sm-5 px-0 mt-0 ml-n3">
         <div class="d-block d-sm-flex align-center">
             <v-breadcrumbs 
@@ -103,9 +105,6 @@
       </div>
     </v-container>
   </v-footer>
-  <!-- -----------------------------------------------
-        End Footer
-  ----------------------------------------------- -->
 </template>
 
 <style lang="scss" scoped>

@@ -89,7 +89,7 @@
           </span>
 
          <v-tabs v-model="currentTab" class="mt-2"
-          slider-color="accent" align-tabs="center">
+          slider-color="accent">
             <v-tab v-for="tab in tabs"
              :key="tab" :value="tab">
               {{ tab }}

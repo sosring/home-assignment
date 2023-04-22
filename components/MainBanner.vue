@@ -13,6 +13,11 @@
     </v-img>
 
     <!-- Need to add a snackbar -->
+    <div class="snackbar">
+      <v-icon color="grey">mdi-map-marker</v-icon>
+      <p>Old Trafford | Capacity: 75,643 –</p>
+      <a href="#"> See what’s nearby</a>
+    </div>
 
   </v-container>
 </template>
@@ -38,5 +43,20 @@
     width: 200px;
     @include sm { width: 250px; }
     @include md { width: 350px; }
+  }
+
+  .snackbar {
+    display: flex;
+    gap: .5rem;
+    background: rgba(255 255 255 / .8);
+    padding: .3rem 1rem;
+
+    position: absolute;
+    top: 1rem;
+    right: .5rem;
+    font-size: clamp(.7rem, 2.5vw, 1rem);
+    @include md {
+      right: 2rem;
+    }
   }
 </style>

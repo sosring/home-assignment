@@ -1,91 +1,51 @@
-<script setup>
- const valid = ref(false)
-
- // Name rules
- const name = ref('')
- const nameRules = [
-    value => {
-      if (value) return true
-
-      return 'Name is requred.'
-    },
-    value => {
-      if (value?.length <= 10) return true
-
-      return 'Name must be less than 10 characters.'
-    },
-  ]
-
- // Email rules
- const email = ref('')
- const emailRules = [
-    value => {
-      if (value) return true
-
-      return 'E-mail is requred.'
-    },
-    value => {
-      if (/.+@.+\..+/.test(value)) return true
-
-      return 'E-mail must be valid.'
-    },
-  ]
-</script>
-
 <template>
+  <form @submit.prevent="">
 
-  <v-form class="w-75" v-model="valid">
+    <label>Get Ticket Alerts, News and more:</label>
+    
+    <input type=""
+     placeholder="Your Name">
 
-    <v-container class="px-0">
-      <v-row class="d-flex 
-       justify-end align-center">
+    <input type=""
+     placeholder="Email Address">
 
-       <label class="font-weight-bold">
-        Get Ticket Alerts, News and more:
-       </label>
-
-        <v-col cols="12" md="4" >
-          <v-text-field
-            v-model="name"
-            :rules="nameRules"
-            :counter="10"
-            label="Your Name"
-            variant="solo"
-            required>
-           </v-text-field>
-        </v-col>
-
-        <v-col cols="12" md="4">
-          <v-text-field
-            v-model="email"
-            :rules="emailRules"
-            label="Email Address"
-            variant="solo"
-            required
-          ></v-text-field>
-        </v-col>
-
-        <v-btn type="submit"
-         color="accent"
-         rounded="0"
-         append-icon="mdi-arrow-right" 
-         variant="outlined"
-         class="py-1">
-          Stay Updated
-        </v-btn>
-
-      </v-row>
-    </v-container>
-  </v-form>
+    <v-btn
+     color="accent"
+     variant="outlined"
+     append-icon="mdi-arrow-right">
+      Stay Update
+    </v-btn>
+  </form>
 </template>
 
 <style lang="scss" scoped>
   
-  .v-form {
+  form {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    grid-gap: .5rem;
+    align-items: center;
+    margin: 1rem 0;
     width: 100%;
-    @include sm { width: 50% }
-  }
+    @include md { 
+     width: 70% ;
+      grid-template-columns: repeat(4, 1fr);
+   }
 
+    label {
+      font-size: clamp(.8rem, 2.5vw, 1.2rem)
+    }
+
+    input {
+     background: white;
+     padding: .5rem .7rem;
+     height: 100%;
+    }
+
+    .v-btn {
+      border: 2px solid $accent;
+      border-radius: 0;
+      padding: .5rem .7rem;
+      height: 100%;
+    }
+  }
 </style>

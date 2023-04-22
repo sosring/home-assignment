@@ -13,11 +13,18 @@ export const useFootballStore = defineStore('useFootball', {
         return await res.data.data
       }
       catch (err) {
-        return err.response.data.message
+        return 'Something went wrong!'
       }
     },
    
    async getFilteredResults () {
+      try {
+        const res = await axios(`${this.url}/filter`)
+        return await res.data.data
+      }
+      catch (err) {
+        return 'Something went wrong!'
+      }
    },
 
    async getStadium () {
@@ -26,7 +33,7 @@ export const useFootballStore = defineStore('useFootball', {
         return await res.data.data
       }
       catch (err) {
-        return err.response.data.message
+        return 'Something went wrong!'
       }
    },
 
@@ -36,7 +43,7 @@ export const useFootballStore = defineStore('useFootball', {
         return await res.data.data
       }
       catch (err) {
-        return err.response.data.message
+        return 'Something went wrong!'
       }
    },
 
@@ -46,7 +53,7 @@ export const useFootballStore = defineStore('useFootball', {
         return await res.data.data
       }
       catch (err) {
-        return err.response.data.message
+        return 'Something went wrong!'
       }
    }
   }

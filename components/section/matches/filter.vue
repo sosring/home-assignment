@@ -1,7 +1,18 @@
 <script setup>
+  import { useFootballStore } from '~/stores/useFootballStore.js'
+  const useFootball = useFootballStore()
+
+  const result = ref(null)
+
+  onMounted(async () => {
+    // Nested data    
+    const data = await useFootball.getFilteredResults()
+    result.value = data
+  })
 </script>
 
 <template>
+{{result}}
 
   <v-card
    elevation="4"
@@ -17,7 +28,7 @@
     </template>
 
     <v-card-item>
-      <v-card-title>Cafe Badilico</v-card-title>
+      <v-card-title></v-card-title>
 
       <v-card-subtitle>
         <span class="me-1">Local Favorite</span>
@@ -82,4 +93,8 @@
       </v-btn>
     </v-card-actions>
   </v-card>
+
 </template>
+
+<style lang="scss" scoped>
+</style>

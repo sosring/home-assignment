@@ -160,25 +160,25 @@
 .ticket {
   position: relative;
 
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    top: calc(.7rem - 1px);
-    height: .9rem;
-    width: .5rem;
-    background: lighten($secoundary, 5); 
-    z-index: 1;
-  }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(.7rem - 1px);
+      height: .9rem;
+      width: .5rem;
+      background: lighten($secoundary, 5); 
+      z-index: 1;
+    }
 
-  &:before {
-    left: 0px;
-    border-radius: 0 1em 1em 0;
-  }
+    &:before {
+      left: 0px;
+      border-radius: 0 1em 1em 0;
+    }
 
-  &:after {
-    right: 0px;
-    border-radius: 1em 0 0 1em;
+    &:after {
+      right: 0px;
+      border-radius: 1em 0 0 1em;
+    }
   }
-}
 </style>
