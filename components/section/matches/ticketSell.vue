@@ -1,8 +1,8 @@
 <template>
   <v-card max-width="412"
-    class="ticket-shape mt-8 mx-auto 
-    d-flex flex-column align-center
-    pa-6">
+   class="ticket-shape mt-8 mx-auto 
+   d-flex flex-column align-center
+   pa-6">
 
     <v-card-item>
       <span class="align-center">

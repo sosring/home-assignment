@@ -32,6 +32,7 @@
 
         <Section-matches-filter 
          :result="filteredResults" />
+
         <Section-matches-ticketSell />
       </v-col>
 

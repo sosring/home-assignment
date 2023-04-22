@@ -8,7 +8,8 @@
 <template>
 
   <v-card elevation="4" 
-   v-if="result" max-width="412">
+   v-if="result" max-width="412"
+   class="mx-auto">
 
     <div class="d-flex py-2 px-4 
      justify-space-between align-center">
