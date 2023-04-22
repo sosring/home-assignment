@@ -1,97 +1,74 @@
 <script setup>
-  import { useFootballStore } from '~/stores/useFootballStore.js'
-  const useFootball = useFootballStore()
 
-  const result = ref(null)
-
-  onMounted(async () => {
-    // Nested data    
-    const data = await useFootball.getFilteredResults()
-    result.value = data
-  })
+  const props = defineProps({
+    result: Array 
+  });
 </script>
 
 <template>
-{{result}}
 
-  <v-card
-   elevation="4"
-   class="mx-auto"
-   max-width="374">
-    <template v-slot:loader="{ isActive }">
-      <v-progress-linear
-        :active="isActive"
-        color="deep-purple"
-        height="4"
-        indeterminate
-      ></v-progress-linear>
-    </template>
+  <v-card elevation="4" class="mx-auto"
+   v-if="result" max-width="412">
 
-    <v-card-item>
-      <v-card-title></v-card-title>
+    <div class="d-flex py-2 px-4 
+     justify-space-between align-center">
 
-      <v-card-subtitle>
-        <span class="me-1">Local Favorite</span>
+      <v-card-title class="px-0">
+        <span>
+          <v-icon>mdi-filter-variant</v-icon>
+          Filter Results
+        </span>
+      </v-card-title>
 
-        <v-icon
-          color="error"
-          icon="mdi-fire-circle"
-          size="small"
-        ></v-icon>
-      </v-card-subtitle>
-    </v-card-item>
-
-    <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-        <v-rating
-          :model-value="4.5"
-          color="amber"
-          density="compact"
-          half-increments
-          readonly
-          size="small"
-        ></v-rating>
-
-        <div class="text-grey ms-4">
-          4.5 (413)
-        </div>
-      </v-row>
-
-      <div class="my-4 text-subtitle-1">
-        $ • Italian, Cafe
-      </div>
-
-      <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
-    </v-card-text>
-
-    <v-divider class="mx-4 mb-1"></v-divider>
-
-    <v-card-title>Tonight's availability</v-card-title>
-
-    <div class="px-4">
-      <v-chip-group v-model="selection">
-        <v-chip>5:30PM</v-chip>
-
-        <v-chip>7:30PM</v-chip>
-
-        <v-chip>8:00PM</v-chip>
-
-        <v-chip>9:00PM</v-chip>
-      </v-chip-group>
+      <v-chip color="grey-darken-4">
+       Reset filters
+      </v-chip>
     </div>
 
-    <v-card-actions>
-      <v-btn
-        color="deep-purple-lighten-2"
-        variant="text"
-        @click="reserve"
-      >
-        Reserve
-      </v-btn>
-    </v-card-actions>
+    <v-divider></v-divider>
+
+   <!-- City -->
+    <v-card-title>City</v-card-title>
+    <v-radio-group>
+     <div v-for="city in result.city" 
+      :key="city" class="d-flex px-4
+      align-center justify-space-between">
+
+      <v-radio :label="city.city_name" :value="city.city_id">
+      </v-radio>
+
+      <p class="text-grey">( {{ city.total }} )</p>
+     </div>
+    </v-radio-group>
+
+   <!-- Tournament -->
+    <v-card-title>Tournament</v-card-title>
+    <v-radio-group>
+     <div v-for="tournament in result.tournament" 
+      :key="tournament" class="d-flex px-4
+      align-center justify-space-between">
+
+      <v-radio :label="tournament.name" :value="tournament.id">
+      </v-radio>
+
+      <p class="text-grey">( {{ tournament.total }} )</p>
+     </div>
+    </v-radio-group>
+
+   <!-- Team -->
+    <v-card-title>Team</v-card-title>
+    <v-radio-group>
+     <div v-for="team in result.team" 
+      :key="team" class="d-flex px-4 
+      align-center justify-space-between">
+
+       <v-radio :label="team.name" :value="team.id">
+       </v-radio>
+       <p class="text-grey">( {{ team.total }} )</p>
+     </div>
+
+    </v-radio-group>
+
   </v-card>
 
 </template>

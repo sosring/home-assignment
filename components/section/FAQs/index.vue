@@ -6,13 +6,12 @@
   const nearTeams = ref(null)
 
   onMounted(async () => {
-    // Nested data    
-    const data = await Promise.all([
+    const res = await Promise.all([
       useFootball.getNearbyStadiums(),
       useFootball.getNearbyTeams()
      ])
-     nearStadiums.value = data[0]
-     nearTeams.value = data[1]
+    nearStadiums.value = res[0]
+    nearTeams.value = res[1]
   })
 </script>
 

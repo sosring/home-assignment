@@ -22,7 +22,7 @@
   
   form {
     display: grid;
-    grid-gap: .5rem;
+    grid-gap: 1rem;
     align-items: center;
     margin: 1rem 0;
     width: 100%;

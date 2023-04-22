@@ -83,7 +83,7 @@
       flex-wrap mx-auto justify-center"
       :items="breadcrumbs"
       divider="|">
-       <template #title="{item}">
+       <template #title="{ item }">
 
          <v-icon color="accent">
           mdi-check-circle-outline

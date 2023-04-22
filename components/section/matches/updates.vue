@@ -1,14 +1,8 @@
 <script setup>
-  import { useFootballStore } from '~/stores/useFootballStore.js'
-  const useFootball = useFootballStore()
 
-  const matches = ref(null)
-
-  onMounted(async () => {
-    // Nested data    
-    const { data } = await useFootball.getMatcheUpdates()
-    matches.value = data
-  })
+  const props = defineProps({
+    matches: Array 
+  });
 </script>
 
 <template>

@@ -26,12 +26,12 @@
     </v-btn>
    </div>
 
-     <span class="ma-4">
+     <span class="my-4">
 
        <v-chip
         v-for="item in items"
         :key="item"
-        color="blue-darken-3"
+        color="blue-darken-4"
         size="small">
         {{ item.name }}
       </v-chip>

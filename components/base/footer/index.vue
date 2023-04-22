@@ -43,7 +43,7 @@
         Second Column
       ----------------------------------------------- -->
 
-      <div class="secound-column w-100">
+      <div class="secound-column w-100 py-sm-4">
 
         <v-col v-for="item in footerItems"
          :key="item" class="px-0">
