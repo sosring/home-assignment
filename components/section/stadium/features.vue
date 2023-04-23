@@ -23,6 +23,7 @@
 
         <v-img
          width="50"
+         :alt="item.icon"
          :src="`/svgs/${item.icon}.svg`">
         </v-img>
 
