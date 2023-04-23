@@ -10,7 +10,7 @@
 <template>
 
   <v-container fluid 
-   class="px-0 pa-sm-4 pa-lg-16">
+   class="pa-sm-4 pa-lg-16">
     <h3 class="title mb-4">{{ stadium.name }} History & Facts</h3>
 
     <v-row class="container ma-0 flex-wrap"
@@ -18,7 +18,7 @@
      v-for="i in 3" :key="i">
 
       <v-col sm="3"
-       class="d-flex justify-space-between ">
+       class="d-flex px-0 justify-space-between ">
         <p class="font-weight-bold">Established:</p>
         <p>1993</p>
       </v-col>

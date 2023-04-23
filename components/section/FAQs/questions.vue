@@ -8,6 +8,7 @@
 </script>
 
 <template>
+
   <v-container>
     <h3 class="title">Old Trafford ticket information</h3>
 

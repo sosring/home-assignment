@@ -23,26 +23,28 @@
    class="px-0 pa-sm-4 pa-lg-16">
 
     <v-row>
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="7" lg="8">
         <Section-FAQs-questions />
       </v-col>
 
-      <v-col class="chip-container mt-md-16">
+      <v-col class="mt-md-16">
 
-      <!-- Near by Teams -->
-        <Section-FAQs-article 
-         title="Nearby Teams"
-         icon="mdi-fire"
-         icon_color="orange"
-         :items="nearTeams" />
+       <v-container class="chip-container">
 
-      <!-- Near by Stadiums -->
-        <Section-FAQs-article 
-         title="Nearby Stadiums"
-         icon="mdi-soccer-field"
-         icon_color="grey"
-         :items="nearStadiums" />
+        <!-- Near by Teams -->
+          <Section-FAQs-article 
+           title="Nearby Teams"
+           icon="mdi-fire"
+           icon_color="orange"
+           :items="nearTeams" />
 
+        <!-- Near by Stadiums -->
+          <Section-FAQs-article 
+           title="Nearby Stadiums"
+           icon="mdi-soccer-field"
+           icon_color="grey"
+           :items="nearStadiums" />
+        </v-container>
       </v-col>
     </v-row>
   </v-container>
