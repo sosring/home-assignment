@@ -1,13 +1,10 @@
-<script setup>
-  
-</script>
-
 <template>
 
   <v-app>
     <base-header />
 
     <v-main>
+     <v-skeleton-loader></v-skeleton-loader>
       <slot />
     </v-main>
 

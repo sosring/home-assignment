@@ -3,6 +3,7 @@
 // styles
 import 'vuetify/styles'
 import '@mdi/font/css/materialdesignicons.css'
+import { VSkeletonLoader } from 'vuetify/labs/VSkeletonLoader'
 
 // vuetify
 import { createVuetify } from 'vuetify'

@@ -21,54 +21,50 @@
         </span>
       </v-card-title>
 
-      <v-chip color="grey-darken-4">
-       Reset filters
-      </v-chip>
+      <v-btn 
+       color="grey-lighten-2"
+       rounded
+       size="small">
+       RESET FILTERS
+      </v-btn>
     </div>
 
     <v-divider></v-divider>
 
    <!-- City -->
     <v-card-title>City</v-card-title>
-    <v-radio-group>
      <div v-for="city in result.city" 
       :key="city" class="d-flex px-4
       align-center justify-space-between">
 
-      <v-radio :label="city.city_name" :value="city.city_id">
-      </v-radio>
+      <v-checkbox :label="city.city_name" :value="city.city_id">
+      </v-checkbox>
 
       <p class="text-grey">( {{ city.total }} )</p>
      </div>
-    </v-radio-group>
 
    <!-- Tournament -->
     <v-card-title>Tournament</v-card-title>
-    <v-radio-group>
      <div v-for="tournament in result.tournament" 
       :key="tournament" class="d-flex px-4
       align-center justify-space-between">
 
-      <v-radio :label="tournament.name" :value="tournament.id">
-      </v-radio>
+      <v-checkbox :label="tournament.name" :value="tournament.id">
+      </v-checkbox>
 
       <p class="text-grey">( {{ tournament.total }} )</p>
      </div>
-    </v-radio-group>
 
    <!-- Team -->
     <v-card-title>Team</v-card-title>
-    <v-radio-group>
      <div v-for="team in result.team" 
       :key="team" class="d-flex px-4 
       align-center justify-space-between">
 
-       <v-radio :label="team.name" :value="team.id">
-       </v-radio>
+       <v-checkbox :label="team.name" :value="team.id">
+       </v-checkbox>
        <p class="text-grey">( {{ team.total }} )</p>
      </div>
-
-    </v-radio-group>
 
   </v-card>
 

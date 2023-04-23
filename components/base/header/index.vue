@@ -90,7 +90,7 @@
           mdi-check-circle-outline
          </v-icon>
 
-         <p class="text-caption font-weight-bold"> {{item}} </p>
+         <p class="font-weight-bold"> {{item}} </p>
        </template>
      </v-breadcrumbs>
 
@@ -109,5 +109,9 @@
 
   .v-breadcrumbs {
     @include md { width: 70% }
+
+    p {
+      font-size: clamp(.7rem, 2vw, .9rem)
+    }
   }
 </style>
