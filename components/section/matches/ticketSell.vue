@@ -1,4 +1,5 @@
 <template>
+
   <v-card max-width="412"
    class="ticket-shape mt-8 mx-auto 
    d-flex flex-column align-center
@@ -34,6 +35,8 @@
     position: relative;
     background: lighten($accent, 40);
     text-align: center;
+    border: solid $accent;
+    overflow: visible;
 
     &:before,
     &:after {
@@ -44,16 +47,19 @@
       height: 3rem;
       width: 2rem;
       background: white; 
-      border: solid $accent;
+      border-color: $accent;
+      border-style: solid;
     }
 
     &:before {
       left: -3px;
+      border-width: 3px 3px 3px 0;
       border-radius: 0 2rem 2rem 0;
     }
 
     &:after {
       right: -3px;
+      border-width: 3px 0 3px 3px;
       border-radius: 2rem 0 0 2rem;
     }
   }
